@@ -1,0 +1,116 @@
+int led_a=3;
+int led_b=2;
+int led_c=9;
+int led_d=8;
+int led_e=7;
+int led_f=5;
+int led_g=6;
+int led_dp=10;
+void setup()
+{
+  pinMode(led_a, OUTPUT);
+  pinMode(led_b, OUTPUT);
+  pinMode(led_c, OUTPUT);
+  pinMode(led_d, OUTPUT);
+  pinMode(led_e, OUTPUT);
+  pinMode(led_f, OUTPUT);
+  pinMode(led_g, OUTPUT);
+  pinMode(led_dp, OUTPUT);
+  randomSeed(analogRead(0));
+}
+
+void loop()
+{
+  int randNumber=random(1,6);
+  
+  if (randNumber==1){
+    one();
+  }
+  if (randNumber==2){
+    two();
+  }
+  if (randNumber==3){
+    three();
+  }
+  if(randNumber==4){
+    four();
+  }
+  if (randNumber==5){
+    five();
+  }
+  if(randNumber==6){
+    six();
+  }
+  delay(5000);
+  clearAll();
+}
+void clearAll(){
+  digitalWrite(led_a,LOW);
+  digitalWrite(led_b,LOW);
+  digitalWrite(led_c,LOW);
+  digitalWrite(led_d,LOW);
+  digitalWrite(led_e,LOW);
+  digitalWrite(led_f,LOW);
+  digitalWrite(led_g,LOW);
+  digitalWrite(led_dp,LOW);
+}
+void one(){
+  digitalWrite(led_a,LOW);
+  digitalWrite(led_b,HIGH);
+  digitalWrite(led_c,HIGH);
+  digitalWrite(led_d,LOW);
+  digitalWrite(led_e,LOW);
+  digitalWrite(led_f,LOW);
+  digitalWrite(led_g,LOW);
+  digitalWrite(led_dp,LOW);
+}
+void two(){
+  digitalWrite(led_a,HIGH);
+  digitalWrite(led_b,HIGH);
+  digitalWrite(led_c,LOW);
+  digitalWrite(led_d,HIGH);
+  digitalWrite(led_e,HIGH);
+  digitalWrite(led_f,LOW);
+  digitalWrite(led_g,HIGH);
+  digitalWrite(led_dp,LOW);
+}
+void three(){
+  digitalWrite(led_a,HIGH);
+  digitalWrite(led_b,HIGH);
+  digitalWrite(led_c,HIGH);
+  digitalWrite(led_d,HIGH);
+  digitalWrite(led_e,LOW);
+  digitalWrite(led_f,LOW);
+  digitalWrite(led_g,HIGH);
+  digitalWrite(led_dp,LOW);
+}
+void four(){
+  digitalWrite(led_a,LOW);
+  digitalWrite(led_b,HIGH);
+  digitalWrite(led_c,HIGH);
+  digitalWrite(led_d,LOW);
+  digitalWrite(led_e,LOW);
+  digitalWrite(led_f,HIGH);
+  digitalWrite(led_g,HIGH);
+  digitalWrite(led_dp,LOW);
+}
+void five(){
+  digitalWrite(led_a,HIGH);
+  digitalWrite(led_b,LOW);
+  digitalWrite(led_c,HIGH);
+  digitalWrite(led_d,HIGH);
+  digitalWrite(led_e,LOW);
+  digitalWrite(led_f,HIGH);
+  digitalWrite(led_g,HIGH);
+  digitalWrite(led_dp,LOW);
+}
+void six(){
+  digitalWrite(led_a,HIGH);
+  digitalWrite(led_b,LOW);
+  digitalWrite(led_c,HIGH);
+  digitalWrite(led_d,HIGH);
+  digitalWrite(led_e,HIGH);
+  digitalWrite(led_f,HIGH);
+  digitalWrite(led_g,HIGH);
+  digitalWrite(led_dp,LOW);
+}
